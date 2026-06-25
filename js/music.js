@@ -15,10 +15,10 @@
 ────────────────────────────────────────────── */
 const songs = [
   {
-    title:  'Agrega tus canciones',
-    artist: 'En music.js → const songs',
-    src:    '',
-    cover:  'emoji:🎵',
+    title: 'My Kind Of Woman',
+    artist: 'Mac DeMarco',
+    src: 'assets/music/my-kind-of-woman.mp3',
+    cover: 'assets/images/my-kind-of-woman.jpeg',
   },
   /* Ejemplo con archivo real:
   {
@@ -36,20 +36,20 @@ const songs = [
 let currentIndex = 0;
 let isPlaying = false;
 
-const audio    = document.getElementById('audio-player');
-const playBtn  = document.getElementById('play-btn');
-const prevBtn  = document.getElementById('prev-btn');
-const nextBtn  = document.getElementById('next-btn');
+const audio = document.getElementById('audio-player');
+const playBtn = document.getElementById('play-btn');
+const prevBtn = document.getElementById('prev-btn');
+const nextBtn = document.getElementById('next-btn');
 const progress = document.getElementById('player-progress');
-const volSlider= document.getElementById('volume-slider');
-const titleEl  = document.getElementById('player-title');
+const volSlider = document.getElementById('volume-slider');
+const titleEl = document.getElementById('player-title');
 const artistEl = document.getElementById('player-artist');
-const coverEl  = document.getElementById('player-cover');
+const coverEl = document.getElementById('player-cover');
 const coverEmojiEl = document.getElementById('cover-emoji');
-const timeCurrent  = document.getElementById('time-current');
-const timeTotal    = document.getElementById('time-total');
+const timeCurrent = document.getElementById('time-current');
+const timeTotal = document.getElementById('time-total');
 const playlist = document.getElementById('playlist');
-const vinylRing= document.getElementById('vinyl-ring');
+const vinylRing = document.getElementById('vinyl-ring');
 
 /* ── RENDER PLAYLIST ── */
 function renderPlaylist() {
@@ -99,7 +99,7 @@ function loadSong(index, autoPlay = false) {
   currentIndex = index;
   const song = songs[index];
 
-  titleEl.textContent  = song.title;
+  titleEl.textContent = song.title;
   artistEl.textContent = song.artist;
   updateMainCover(song.cover);
 
@@ -120,7 +120,7 @@ function loadSong(index, autoPlay = false) {
 
   progress.value = 0;
   timeCurrent.textContent = '0:00';
-  timeTotal.textContent   = '0:00';
+  timeTotal.textContent = '0:00';
   renderPlaylist();
 }
 
@@ -160,7 +160,7 @@ audio.addEventListener('ended', () => {
   loadSong(next, true);
 });
 
-audio.addEventListener('play',  () => { setPlaying(true);  renderPlaylist(); });
+audio.addEventListener('play', () => { setPlaying(true); renderPlaylist(); });
 audio.addEventListener('pause', () => { setPlaying(false); renderPlaylist(); });
 
 /* ── CONTROLES ── */
@@ -173,7 +173,7 @@ playBtn.addEventListener('click', () => {
     audio.pause();
   } else {
     if (audio.src) {
-      audio.play().catch(() => {});
+      audio.play().catch(() => { });
     }
   }
 });
@@ -204,9 +204,18 @@ volSlider.addEventListener('input', () => {
 
 /* ── INICIALIZAR ── */
 (function init() {
+  const START_VOL = 0.35;
+
   if (songs.length > 0) {
     loadSong(0, false);
   }
-  volSlider.value = 0.7;
-  audio.volume = 0.7;
+
+  volSlider.value = START_VOL;
+  audio.volume    = START_VOL;
 })();
+
+/* Llamada desde main.js cuando el usuario pulsa "Abrir mi regalo" */
+function startMusicOnGift() {
+  if (!audio.src || isPlaying) return;
+  audio.play().then(() => setPlaying(true)).catch(() => {});
+}

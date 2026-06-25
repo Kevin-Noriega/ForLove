@@ -91,12 +91,17 @@ function initParticles() {
 
 /* ── MODO OSCURO ── */
 function initDarkMode() {
-  const btn = document.getElementById('dark-toggle');
+  const btn  = document.getElementById('dark-toggle');
   const body = document.body;
   const saved = localStorage.getItem('yulia-dark');
 
-  if (saved === 'true') {
-    body.classList.replace('light-mode', 'dark-mode');
+  // Default: modo oscuro. Solo cambia a claro si el usuario lo eligió explícitamente.
+  if (saved === 'false') {
+    body.classList.replace('dark-mode', 'light-mode');
+    btn.textContent = '🌙';
+  } else {
+    body.classList.add('dark-mode');
+    body.classList.remove('light-mode');
     btn.textContent = '☀️';
   }
 
@@ -117,6 +122,9 @@ function initDarkMode() {
 /* ── BOTÓN ABRIR REGALO ── */
 function initOpenGift() {
   document.getElementById('open-gift-btn').addEventListener('click', () => {
+    // Arrancar música — este click es la interacción que el navegador necesita
+    if (typeof startMusicOnGift === 'function') startMusicOnGift();
+
     const firstSection = document.getElementById('dedicatoria');
     firstSection.classList.add('visible');
     firstSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
