@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Para Yulia 🌸</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="light-mode">
+
+    <!-- Partículas de fondo -->
+    <div id="particles-container" aria-hidden="true"></div>
+
+    <!-- Personaje chibi flotante — imagen de Yulia -->
+    <div id="chibi-character" aria-hidden="true">
+        <div class="chibi-img-wrap">
+            <img src="assets/images/yulia-chibi.png" alt="Yulia" class="chibi-img" />
+            <div class="chibi-glow"></div>
+        </div>
+        <div class="chibi-bubble" id="chibi-bubble">¡Ánimo Yulia! 💕</div>
+    </div>
+
+    <!-- Botón modo oscuro -->
+    <button id="dark-toggle" aria-label="Cambiar modo oscuro" title="Modo oscuro">🌙</button>
+
+    <!-- ===== SECCIÓN 1: BIENVENIDA ===== -->
+    <section id="welcome" class="section welcome-section">
+        <div class="sakura-bg" aria-hidden="true"></div>
+        <!-- Anillos decorativos Klimt -->
+        <div class="klimt-deco-rings" aria-hidden="true">
+            <div class="kr"></div>
+            <div class="kr"></div>
+            <div class="kr"></div>
+            <div class="kr"></div>
+            <div class="kr"></div>
+        </div>
+        <div class="welcome-content">
+            <div class="star-badge" aria-hidden="true">✨</div>
+            <h1 class="welcome-title fade-in-up">Para Yulia <span class="sakura-icon">🌸</span></h1>
+            <p class="welcome-subtitle fade-in-up delay-1">
+                Este pequeño regalo es para recordarte<br>que <em>tu voz merece ser escuchada</em>
+            </p>
+            <div class="floating-hearts" aria-hidden="true">
+                <span>💕</span><span>🌸</span><span>⭐</span><span>💖</span><span>🌷</span>
+            </div>
+            <button class="btn-main fade-in-up delay-2" id="open-gift-btn">
+                Abrir mi regalo <span>💖</span>
+            </button>
+        </div>
+        <div class="scroll-indicator" aria-hidden="true"><span>↓</span></div>
+    </section>
+
+    <!-- ===== SECCIÓN 2: DEDICATORIA ===== -->
+    <section id="dedicatoria" class="section dedicatoria-section hidden-section">
+        <div class="klimt-deco-rings" aria-hidden="true">
+            <div class="kr"></div>
+            <div class="kr"></div>
+            <div class="kr"></div>
+        </div>
+        <div class="section-deco" aria-hidden="true">🌸 ✨ 💜</div>
+        <div class="letter-card">
+            <div class="letter-header">
+                <span class="letter-icon">💌</span>
+                <h2>Una carta para ti</h2>
+            </div>
+            <div class="typewriter-container">
+                <p id="typewriter-text" class="typewriter-text"></p>
+                <span class="cursor" id="type-cursor">|</span>
+            </div>
+            <div class="letter-footer">
+                <span class="signature">Con cariño ❤️</span>
+                <div class="letter-decorations" aria-hidden="true">🌸 🌷 ✨</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECCIÓN 3: AMOR + NUTRICIÓN ===== -->
+    <section id="amor" class="section amor-section hidden-section">
+        <!-- Cuadro de Klimt como fondo -->
+        <div class="klimt-painting-bg" aria-hidden="true"></div>
+        <div class="amor-overlay" aria-hidden="true"></div>
+        <div class="klimt-deco-rings" aria-hidden="true">
+            <div class="kr"></div>
+            <div class="kr"></div>
+            <div class="kr"></div>
+            <div class="kr"></div>
+        </div>
+
+        <div class="amor-content">
+            <!-- Encabezado -->
+            <div class="amor-header">
+                <div class="amor-badge">💛 Para ti, Yulia</div>
+                <h2 class="amor-title">Eres luz dorada</h2>
+                <p class="amor-sub">Para la mujer que cuida a todos… aquí alguien te cuida a ti</p>
+            </div>
+
+            <!-- Tarjetas de amor y nutrición -->
+            <div class="amor-cards">
+
+                <div class="amor-card amor-gold">
+                    <span class="amor-icon">💛</span>
+                    <p class="amor-quote">"Eres de esas personas que hacen que el mundo sea más bonito solo con
+                        existir."</p>
+                </div>
+
+                <div class="amor-card amor-rose">
+                    <span class="amor-icon">🌸</span>
+                    <p class="amor-quote">"Cada vez que sonríes, iluminas todo lo que te rodea. Eso tiene un poder
+                        enorme."</p>
+                </div>
+
+                <!-- Tarjeta especial de Nutrición -->
+                <div class="amor-card amor-nutri">
+                    <div class="nutri-header">
+                        <span class="nutri-badge">🥑 Estudiante de Nutrición</span>
+                    </div>
+                    <p class="amor-quote">"Elegiste sanar a las personas con conocimiento y amor. Eso no es solo una
+                        carrera — es tu misión de vida."</p>
+                    <div class="nutri-icons" aria-label="íconos de nutrición">
+                        <span title="Brócoli">🥦</span>
+                        <span title="Manzana">🍎</span>
+                        <span title="Arándanos">🫐</span>
+                        <span title="Zanahoria">🥕</span>
+                        <span title="Hierbas">🌿</span>
+                        <span title="Limón">🍋</span>
+                        <span title="Aguacate">🥑</span>
+                    </div>
+                    <p class="nutri-tip">Una nutricionista que habla con confianza puede transformar la vida de sus
+                        pacientes. 💚</p>
+                </div>
+
+                <div class="amor-card amor-lilac">
+                    <span class="amor-icon">✨</span>
+                    <p class="amor-quote">"Tu voz, cuando cuenta lo que sabes y lo que sientes, es el regalo más grande
+                        que puedes dar al mundo."</p>
+                </div>
+
+                <div class="amor-card amor-crimson">
+                    <span class="amor-icon">❤️</span>
+                    <p class="amor-quote">"El conocimiento que tienes merece ser escuchado. El mundo necesita más
+                        personas como tú."</p>
+                </div>
+
+                <!-- Frase del libro integrada aquí -->
+                <div class="amor-card amor-book-ref">
+                    <span class="amor-icon">📖</span>
+                    <p class="amor-quote">"Pequeños cambios en la forma de relacionarnos con los demás pueden cambiar
+                        nuestra vida."</p>
+                    <span class="amor-book-author">— Dale Carnegie, <em>How to Win Friends &amp; Influence
+                            People</em></span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECCIÓN 4: PRINCIPIOS DEL LIBRO ===== -->
+    <section id="principios" class="section principios-section hidden-section">
+        <div class="section-header">
+            <h2 class="section-title">💡 Principios que cambiarán tu vida</h2>
+            <p class="section-sub">Lecciones del libro adaptadas para ti</p>
+        </div>
+        <div class="cards-grid" id="principios-grid"></div>
+    </section>
+
+    <!-- ===== SECCIÓN 5: TIPS HABLAR EN PÚBLICO ===== -->
+    <section id="tips" class="section tips-section hidden-section">
+        <div class="section-header">
+            <h2 class="section-title">🎤 Tips para hablar en público</h2>
+            <p class="section-sub">Pequeños secretos que marcan la diferencia</p>
+        </div>
+        <div class="tips-grid" id="tips-grid"></div>
+    </section>
+
+    <!-- ===== SECCIÓN 6: FRASES MOTIVADORAS ===== -->
+    <section id="frases" class="section frases-section hidden-section">
+        <div class="frases-bg" aria-hidden="true"></div>
+        <div class="frases-content">
+            <h2 class="section-title light">💬 Palabras para ti</h2>
+            <div class="quote-display">
+                <div class="quote-deco" aria-hidden="true">✨</div>
+                <p id="quote-text" class="quote-main"></p>
+                <div class="quote-dots" id="quote-dots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECCIÓN 7: RETO DE VALENTÍA ===== -->
+    <section id="reto" class="section reto-section hidden-section">
+        <div class="section-header">
+            <h2 class="section-title">🦋 Reto de valentía</h2>
+            <p class="section-sub">Cada paso cuenta, sin importar qué tan pequeño sea</p>
+        </div>
+        <div class="checklist-card">
+            <div class="checklist-header">
+                <span class="checklist-icon">🌸</span>
+                <div class="progress-info">
+                    <span id="progress-text">0 / 5 completados</span>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" id="progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+            <ul class="checklist" id="checklist"></ul>
+            <div class="checklist-congrats hidden" id="congrats-msg">
+                <div class="congrats-inner">
+                    <span class="congrats-emoji">🎉</span>
+                    <p>¡Lo lograste, Yulia! ¡Eres increíble! 💖</p>
+                    <span class="congrats-emoji">🌸</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECCIÓN 8: REPRODUCTOR DE MÚSICA ===== -->
+    <section id="musica" class="section musica-section hidden-section">
+        <div class="section-header">
+            <h2 class="section-title">🎵 Música para tu viaje</h2>
+            <p class="section-sub">Canciones que acompañan cada paso</p>
+        </div>
+        <div class="player-card">
+            <div class="player-cover-area">
+                <div class="player-cover-wrap">
+                    <div class="player-cover" id="player-cover"><span id="cover-emoji">🎵</span></div>
+                    <div class="vinyl-ring" id="vinyl-ring"></div>
+                </div>
+            </div>
+            <div class="player-info">
+                <p class="player-song-title" id="player-title">Selecciona una canción</p>
+                <p class="player-artist" id="player-artist">—</p>
+            </div>
+            <div class="player-progress-wrap">
+                <span class="time-label" id="time-current">0:00</span>
+                <input type="range" class="player-progress" id="player-progress" value="0" min="0" max="100" step="0.1"
+                    aria-label="Progreso" />
+                <span class="time-label" id="time-total">0:00</span>
+            </div>
+            <div class="player-controls">
+                <button class="ctrl-btn" id="prev-btn" aria-label="Anterior">⏮</button>
+                <button class="ctrl-btn play-btn" id="play-btn" aria-label="Play/Pause">▶</button>
+                <button class="ctrl-btn" id="next-btn" aria-label="Siguiente">⏭</button>
+            </div>
+            <div class="volume-wrap">
+                <span>🔈</span>
+                <input type="range" class="volume-slider" id="volume-slider" min="0" max="1" step="0.05" value="0.7"
+                    aria-label="Volumen" />
+                <span>🔊</span>
+            </div>
+            <div class="playlist" id="playlist"></div>
+        </div>
+    </section>
+
+    <!-- ===== SECCIÓN 9: MENSAJE FINAL ===== -->
+    <section id="final" class="section final-section hidden-section">
+        <canvas id="sakura-canvas" aria-hidden="true"></canvas>
+        <!-- Prado Klimt — flores del cuadro "El Beso" -->
+        <div class="klimt-deco-rings" aria-hidden="true">
+            <div class="kr"></div>
+            <div class="kr"></div>
+            <div class="kr"></div>
+            <div class="kr"></div>
+        </div>
+        <div class="meadow-flowers" aria-hidden="true">
+            <span class="mflower">🌸</span><span class="mflower">🌷</span>
+            <span class="mflower">🌼</span><span class="mflower">🌺</span>
+            <span class="mflower">💐</span><span class="mflower">🌸</span>
+            <span class="mflower">🌻</span><span class="mflower">🌷</span>
+            <span class="mflower">🌸</span><span class="mflower">🌼</span>
+            <span class="mflower">🌺</span><span class="mflower">🌸</span>
+        </div>
+        <div class="final-content">
+            <div class="final-card">
+                <div class="final-deco" aria-hidden="true">🌸 💖 🌸</div>
+                <h2 class="final-name">Yulia,</h2>
+                <p class="final-text">
+                    no importa cuántas veces tengas miedo,<br>
+                    lo importante es que <strong>sigas hablando</strong>,<br>
+                    porque las personas necesitan escuchar<br>
+                    todo lo bonito que tienes para decir.
+                </p>
+                <div class="final-signature">Con cariño Kevin<span class="heart-pulse">❤️</span></div>
+
+            </div>
+        </div>
+    </section>
+
+    <audio id="audio-player" preload="metadata"></audio>
+    <script src="js/main.js"></script>
+    <script src="js/music.js"></script>
+</body>
+
+</html>
