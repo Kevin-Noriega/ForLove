@@ -669,7 +669,6 @@ body.dark-mode .tips-section {
    SECCIÓN 6: FRASES
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
 .frases-section {
-  background: linear-gradient(135deg, #7c3aed 0%, #db2777 50%, #0284c7 100%);
   text-align: center;
   overflow: hidden;
 }
@@ -1342,15 +1341,31 @@ body.dark-mode .welcome-section {
     0 0 18px rgba(212,168,67,.15);
 }
 
-/* ── SECCIÓN FRASES: fondo con mosaico dorado Klimt ── */
+/* ── SECCIÓN FRASES: modo claro — joya Klimt vibrante ── */
 .frases-section {
   background: linear-gradient(135deg,
-    #4c1d95 0%, #7c3aed 25%,
-    #be185d 55%, #0c4a6e 80%,
-    #1e0a3c 100%);
+    #6d28d9 0%,
+    #C8971F 28%,
+    #be185d 52%,
+    #2D7A6A 76%,
+    #6d28d9 100%);
   background-size: 300% 300%;
   animation: klimtBgShift 10s ease-in-out infinite;
 }
+
+/* ── SECCIÓN FRASES: modo oscuro — interior del cuadro de noche ── */
+body.dark-mode .frases-section {
+  background: linear-gradient(135deg,
+    #1A0A05 0%,
+    #4A2E00 20%,
+    #8B6914 40%,
+    #3D0A18 62%,
+    #0A1A12 82%,
+    #1A0A05 100%);
+  background-size: 300% 300%;
+  animation: klimtBgShift 10s ease-in-out infinite;
+}
+
 @keyframes klimtBgShift {
   0%,100% { background-position: 0% 50%; }
   50%      { background-position: 100% 50%; }
