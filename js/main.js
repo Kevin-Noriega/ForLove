@@ -24,32 +24,34 @@ const TIPS = [
 ];
 
 const FRASES = [
-  'Tu voz importa. 💜',
-  '¡Puedes hacerlo! ✨',
-  'Cada gran oradora empezó teniendo miedo. 🌸',
-  'Confía en ti. 💪',
-  'El mundo necesita escuchar tus ideas. 🌍',
-  'Eres más valiente de lo que crees. 🦋',
-  'Tu historia merece ser contada. 📖',
+  'Tu voz es una luz que merece ser escuchada. 🌸',
+  'Cada palabra tuya puede cambiar el día de alguien. ✨',
+  'No naciste para esconder tus ideas, naciste para compartirlas. 💛',
+  'El miedo es pasajero, pero tu brillo permanece. 🦋',
+  'Hay una belleza especial en todo lo que tienes para decir. 🌷',
+  'Confía en tu voz, ella conoce el camino. 🌙',
+  'El mundo necesita más personas con un corazón como el tuyo. 🌍',
+  'Tus sueños también comienzan con una sola palabra. 🌟',
 ];
-
 const RETOS = [
-  { icon: '👋', text: 'Saludar a alguien nuevo' },
-  { icon: '🪞', text: 'Hablar frente al espejo 2 minutos' },
-  { icon: '📖', text: 'Contar una historia a un amigo' },
-  { icon: '🙋', text: 'Hacer una pregunta en clase' },
-  { icon: '🎤', text: 'Dar una pequeña presentación' },
+  { icon: '🌸', text: 'Regálale una sonrisa a alguien hoy' },
+  { icon: '🪞', text: 'Mírate al espejo y di tres cosas bonitas sobre ti' },
+  { icon: '🗣️', text: 'Comparte una idea que normalmente guardarías para ti' },
+  { icon: '🍏', text: 'Explica algo que te apasione durante 2 minutos' },
+  { icon: '💌', text: 'Cuéntale a alguien algo que aprecias de esa persona' },
+  { icon: '🎤', text: 'Habla durante un minuto como si estuvieras inspirando a muchas personas' },
 ];
 
 const CHIBI_MESSAGES = [
-  '¡Ánimo Yulia! 💕',
-  '¡Eres increíble! ✨',
-  '¡Tú puedes! 🌸',
-  '¡Qué valiente! 💪',
-  '¡Te admiro! 🦋',
-  '¡Sigue adelante! ⭐',
+  '¡Estoy orgulloso de ti, Yulia! 🌸',
+  '¡Tu voz tiene algo muy bonito! ✨',
+  '¡Nunca dejes de creer en ti! 💛',
+  '¡Eres más valiente de lo que imaginas! 🦋',
+  '¡El mundo necesita tu luz! 🌷',
+  '¡Cada pequeño paso cuenta! 🌟',
+  '¡Sigue brillando, Yulia! 💕',
+  '¡Confía en ti, porque yo también lo haría! 🌙',
 ];
-
 /* ── FECHA DE CREACIÓN DEL REGALO (cambia si quieres) ── */
 const GIFT_CREATION_DATE = new Date('2025-01-01');
 
@@ -91,7 +93,7 @@ function initParticles() {
 
 /* ── MODO OSCURO ── */
 function initDarkMode() {
-  const btn  = document.getElementById('dark-toggle');
+  const btn = document.getElementById('dark-toggle');
   const body = document.body;
   const saved = localStorage.getItem('yulia-dark');
 
@@ -133,7 +135,22 @@ function initOpenGift() {
 }
 
 /* ── MÁQUINA DE ESCRIBIR ── */
-const CARTA = `Yulia, sé que hablar en público\na veces da miedo,\n\npero también sé que tienes\nmuchas cosas bonitas que decir.\n\nEsta página y este libro son\nun pequeño recordatorio\nde que puedes lograr todo\nlo que te propongas. 🌸`;
+/* ── MÁQUINA DE ESCRIBIR ── */
+const CARTA = `Para Yulia:
+
+Quiero que recuerdes
+que las personas más especiales
+también sienten miedo algunas veces.
+
+Pero sé que dentro de ti
+hay una luz enorme,
+una voz que puede inspirar,
+emocionar y hacer sonreír.
+
+Nunca dejes de creer en ti,
+porque yo creo en todo
+lo que eres y en todo
+lo que puedes llegar a ser. 💖🌸`;
 
 let typeIndex = 0;
 let typeStarted = false;

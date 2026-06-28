@@ -222,13 +222,6 @@ body {
   position: relative;
   animation: bubblePop .4s ease;
 }
-.chibi-bubble::after {
-  content: '';
-  position: absolute;
-  top: -6px; left: 16px;
-  border: 4px solid transparent;
-  border-bottom-color: var(--pink);
-}
 
 @keyframes bubblePop {
   0%   { transform: scale(.5); opacity: 0; }
